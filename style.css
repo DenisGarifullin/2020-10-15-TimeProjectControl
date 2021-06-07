@@ -40,25 +40,25 @@ h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight: 400;}
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
+
 .body{
   font-family: roboto, sans-serif;
   color: #5181B8;
-  width: 100%;
-  min-height: 100%;
+
 }
 
 .bodyWrapper{
-
+  width: 100%;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-
+  /*justify-content: space-between;*/
 
 }
 
 .bigHeader{
 background-color: #E5EBF1;
-height: 8em;
+height: 10em;
 
 display: -webkit-flex;
 display: -ms-flex;
@@ -70,7 +70,7 @@ justify-content: center;
 }
 
 .miniHeader{
-  width: 70%;
+  width: 90%;
   -webkit-display: flex;
   -ms-display: flex;
   display: flex;
@@ -97,8 +97,13 @@ a:hover{
   text-decoration-color: #5181B8;
 }
 
-.timeGlobalBG{
+.rightPanel{
+  display: flex;
+  align-items: center;
+}
 
+.timeGlobalBG{
+  margin: 0px 20px 0px 0px;
   -webkit-display: flex;
   -ms-display: flex;
   display: flex;
@@ -115,15 +120,21 @@ a:hover{
 .timeGlobal{
   margin: auto;
   font-size: 32px;
+  font-weight: 100;
 }
 
 .menu{
-  margin: 5px;
+  margin: 0px 0px 0px 50px;
 }
-.container{
-  background-color: #c0c0c0;
 
-  -webkit-display: flex;
+@media all and (max-width: 747px) {
+  h1{
+    display: none;
+
+  }
+}
+
+.container{
   -ms-display: flex;
   display: flex;
   justify-content: center;
@@ -131,15 +142,114 @@ a:hover{
   -ms-align-items: center;
   align-items: center;
   flex: 1 1 auto;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
-
 }
 
 .contentWrapper{
-  width: 80%;
+  width: 95%;
+  padding: 40px 0px;
+
+}
+
+.timerProject{
+  background-color: #F4F7FC;
+  padding: 16px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.nameProjectForm{
+  display: flex;
+  align-items: center;
+
+}
+
+.lamp{
+  background-image: url(/img/lamp.svg);
+  position: relative;
+  display: inline;
+  height: 22px;
+  width: 22px;
+
+  margin:0px 20px 0px 0px;
+  border-radius: 50%;
+}
+
+.lamp:hover{
+  border: 2px solid;
+}
+
+.projectSecondInput{
+  position: relative;
+  display: inline;
+  background-color: #E5EBF1;
+  border-radius: 10px;
+  padding: 5px 5px;
+  margin: 0px 30px 0px 0px;
+  font-size: 40px;
+  font-weight: 100;
+  color: #F4F7FC;
+}
+
+
+  ::-webkit-input-placeholder {color:#5181B8; opacity:1;font-weight: 100;}/* webkit */
+  ::-moz-placeholder          {color:#5181B8; opacity:1;font-weight: 100;}/* Firefox 19+ */
+  :-moz-placeholder           {color:#5181B8; opacity:1;font-weight: 100;}/* Firefox 18- */
+  :-ms-input-placeholder      {color:#5181B8; opacity:1;font-weight: 100;}/* IE */
+
+
+.controlPanelProject{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+}
+
+.trigger{
+
+  display: inline;
+  position: relative;
+  weight: 22px;
+  height: 22px;
+  border-radius: 10px;
+  margin:0px 10px 0px 0px;
+
+  background-image: url(/img/Button Start.svg);
+}
+.button_control{
+  margin: 0 8px;
+}
+
+.timeProjectBG{
+
+  -webkit-display: flex;
+  -ms-display: flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  height: 54px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #E5EBF1;
+
+}
+
+.timeProjectStartBG{
+  margin:0px 30px;
+}
+
+.timeProjectCurrentBG{
+  margin:0px 15px;
+}
+
+.timeProject{
   margin: auto;
+  font-size: 32px;
 }
 
 .footer{
