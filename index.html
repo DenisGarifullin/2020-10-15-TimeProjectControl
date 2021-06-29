@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Time Control</title>
+</head>
+<body class="body">
+  <div class="bodyWrapper">
+    <div class="bigHeader">
+      <div class="miniHeader">
+        <div class="logoWraper">
+          <img src="img/logo.svg", width="100", height="100" alt="G_logo" class="logo">
+        </div>
+        <div class="nameProject">
+          <h1>Time control project</h1>
+        </div>
+        <div class="rightPanel">
+          <div class="timeGlobalBG">
+            <div class="timeGlobal" id="current_date_time_block"></div>
+          </div>
+          <div class="menu">
+            <a href="#" class="burgerMenu">
+              <img src="img/menu.svg" width="54" height="38" alt="Меню" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="container">
+      <div class="contentWrapper">
+        <div class="timerProject">
+          <div class="nameProject">
+            <div class="formWrapper">
+              <form class="nameProjectForm">
+                <div class="lamp"></div>
+                <input type="text" class="projectSecondInput" size="19" placeholder="имя проекта номер один">
+                </input>
+              </form>
+            </div>
+          </div>
+          <div class="controlPanelProject">
+            <form>
+              <button class="button_control"> <img src="img/Button Start.svg" height="54px" weight="54px" alt="Start"></img></button>
+              <button class="button_control"> <img src="img/Button Pause.svg" height="54px" weight="54px" alt="Pause"></img></button>
+              <button class="button_control"> <img src="img/Button Stop.svg" height="54px" weight="54px" alt="Stop"></img></button>
+            </form>
+            <div class="timeProjectBG timeProjectStartBG">
+              <p class="timeProject">12:20</p>
+            </div>
+            <div class="timeProjectBG timeProjectCurrentBG">
+              <p class="timeProject">16:40</p>
+            </div>
+          </div>
+        </div>
+        <div class="timerProject">
+          <div class="nameProject">
+            <div class="formWrapper">
+              <form class="nameProjectForm">
+                <div class="lamp"></div>
+                <input type="text" class="projectSecondInput" size="19" placeholder="имя проекта номер два">
+                </input>
+              </form>
+            </div>
+          </div>
+          <div class="controlPanelProject">
+            <form>
+              <button class="button_control"> <img src="img/Button Start.svg" height="54px" weight="54px" alt="Start"></img></button>
+              <button class="button_control"> <img src="img/Button Pause.svg" height="54px" weight="54px" alt="Pause"></img></button>
+              <button class="button_control"> <img src="img/Button Stop.svg" height="54px" weight="54px" alt="Stop"></img></button>
+            </form>
+            <div class="timeProjectBG timeProjectStartBG">
+              <p class="timeProject">12:20</p>
+            </div>
+            <div class="timeProjectBG timeProjectCurrentBG">
+              <p class="timeProject">16:40</p>
+            </div>
+          </div>
+        </div>
+        <div class="timerProject">
+          <div class="nameProject">
+            <div class="formWrapper">
+              <form class="nameProjectForm">
+                <div class="lamp"></div>
+                <input type="text" class="projectSecondInput" size="19" placeholder="имя проекта номер три">
+                </input>
+              </form>
+            </div>
+          </div>
+          <div class="controlPanelProject">
+            <form>
+              <button class="button_control"> <img src="img/Button Start.svg" height="54px" weight="54px" alt="Start"></img></button>
+              <button class="button_control"> <img src="img/Button Pause.svg" height="54px" weight="54px" alt="Pause"></img></button>
+              <button class="button_control"> <img src="img/Button Stop.svg" height="54px" weight="54px" alt="Stop"></img></button>
+            </form>
+            <div class="timeProjectBG timeProjectStartBG">
+              <p class="timeProject">12:20</p>
+            </div>
+            <div class="timeProjectBG timeProjectCurrentBG">
+              <p class="timeProject">16:40</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapperPanelButtonBottom">
+      <div class="panelButtonBottom">
+        <button class="panelBottom">новый проект</button>
+        <button class="panelBottom">список проектов</button>
+        <button class="panelBottom print">распечатать</button>
+      </div>
+    </div>
+  <div class="footer">
+    <a class="footer_project" href="#">другие проекты</a>
+    <a class="footer_nameDev" href="#">© Денис Гарифуллин 2021</a>
+    <a class="footer_contact" href="#">контакты</a>
+  </div>
+  </div>
+  <script type="text/javascript">
+
+    /* функция добавления ведущих нулей */
+    /* (если число меньше десяти, перед числом добавляем ноль) */
+    function zero_first_format(value)
+    {
+        if (value < 10)
+        {
+            value='0'+value;
+        }
+        return value;
+    }
+
+    /* функция получения текущей даты и времени */
+    function date_time()
+    {
+        var current_datetime = new Date();
+        var day = zero_first_format(current_datetime.getDate());
+        var month = zero_first_format(current_datetime.getMonth()+1);
+        var year = current_datetime.getFullYear();
+        var hours = zero_first_format(current_datetime.getHours());
+        var minutes = zero_first_format(current_datetime.getMinutes());
+        var seconds = zero_first_format(current_datetime.getSeconds());
+
+        return hours+":"+minutes;
+    }
+
+    /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
+    document.getElementById('current_date_time_block').innerHTML = date_time();
+</script>
+</body>
+</html>
