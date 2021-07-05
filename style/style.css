@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+@font-face {
+    font-family: 'Digital Display';
+    src: url('../fonts/Digital-Display.eot');
+    src: url('../fonts/Digital-Display.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Digital-Display.woff2') format('woff2'),
+        url('../fonts/Digital-Display.woff') format('woff'),
+        url('../fonts/Digital-Display.ttf') format('truetype'),
+        url('../fonts/Digital-Display.svg#Digital-Display') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 *{
   padding: 0;
@@ -39,7 +54,6 @@ img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight: 400;}
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
 
 .body{
@@ -120,8 +134,11 @@ a:hover{
 
 .timeGlobal{
   margin: auto;
-  font-size: 32px;
-  font-weight: 100;
+  font-size: 2.6em;
+
+  font-family: 'Digital Display', 'arial';
+  font-weight: normal;
+  font-style: italic;
 }
 
 .menu{
